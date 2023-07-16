@@ -3,35 +3,60 @@ var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 for (var i = 0; i<numberOfDrumButtons; i++)
 {
     document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-        alert("I got Clicked!");  //Anonymous function used in event listener//
-    });
 
+var buttonInnerHTML = this.innerHTML;
+
+switch (buttonInnerHTML) {
+  case "w":
+        var crash = new Audio("./sounds/crash.mp3");
+        crash.play(); 
+        this.style.color ="white"
+    break;
+
+    case "a":
+      var kick = new Audio('./sounds/kick-bass.mp3');
+      kick.play(); 
+      this.style.color ="white"
+break;
+
+case "s":
+        var snare = new Audio('./sounds/snare.mp3');
+        snare.play(); 
+        this.style.color ="white"
+break;
+
+case "d":
+        var tom1 = new Audio('./sounds/tom-1.mp3');
+        tom1.play(); 
+        this.style.color ="white"
+break;
+
+case "j":
+        var tom2 = new Audio('./sounds/tom-2.mp3');
+tom2.play(); 
+this.style.color ="white"
+break;
+
+case "k":
+        var tom3 = new Audio('./sounds/tom-3.mp3');
+        tom3.play(); 
+        this.style.color ="white"
+break;
+
+case "l":
+        var tom4 = new Audio('./sounds/tom-4.mp3');
+        tom4.play(); 
+        this.style.color ="white"
+break;
+
+  default: console.log(button.innerHTML);
+
+}
+    });
 }
 
 
-
-
-
-
-
-// function add(num1, num2) {
-//     return (num1 + num2);}
-// undefined
-// function multiply(num1, num2) {
-//     return (num1 * num2);}
-// undefined
-// function calculator (num1, num2, operator){
-//     return operator(num1, num2);}
-// undefined
-// calculator(2,3,multiply);
-// function add(num1, num2) {
-//     return (num1 + num2);}
-// undefined
-// function multiply(num1, num2) {
-//     return (num1 * num2);}
-// undefined
-// function calculator (num1, num2, operator){
-//     return operator(num1, num2);}
-// undefined
-// calculator(2,3,multiply);
-// 6
+document.addEventListener("keypress", function () {
+        alert("Key was pressed");
+}
+);
